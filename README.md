@@ -1,50 +1,80 @@
-# Welcome to your Expo app 👋
+# Pokemon Mini App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile application built with Expo that displays Pokemon data from PokeAPI.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Login screen with email and password validation
+- Browse Pokemon with lazy loading pagination
+- Pull-to-refresh support
+- View detailed Pokemon information including stats, abilities, and types
+- Clean component architecture with reusable UI components
+
+## Project Structure
+
+```
+src/
+  backend/        - API service for PokeAPI requests
+  components/     - Reusable UI components (Input, Password, Button, Card, Label, PokemonItem)
+  hooks/          - Custom React hooks (useLogin, useHome, useDetails)
+  screens/        - Screen components (LoginScreen, HomeScreen, DetailsScreen)
+  types/          - TypeScript type definitions
+  AppNavigator.tsx - Navigation configuration
+```
+
+## Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+- Expo CLI
+- Android Studio (for Android development) or Xcode (for iOS development)
+- Expo Go app on your mobile device (optional, for testing on physical device)
+
+## Setup Instructions
+
+1. Clone the repository
+
+   ```bash
+   git clone <repository-url>
+   cd pokemon-mini-app
+   ```
+
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Start the development server
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. Run on device or emulator
+   - Press `a` to open on Android emulator
+   - Press `i` to open on iOS simulator
+   - Scan QR code with Expo Go app on your mobile device
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Available Scripts
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- `npm start` - Start Expo development server
+- `npm run android` - Run on Android device/emulator
+- `npm run ios` - Run on iOS simulator
+- `npm run web` - Run in web browser
+- `npm run lint` - Run ESLint
 
-## Get a fresh project
+## API Reference
 
-When you're ready, run:
+This app uses the [PokeAPI](https://pokeapi.co/) to fetch Pokemon data:
 
-```bash
-npm run reset-project
-```
+- List endpoint: `https://pokeapi.co/api/v2/pokemon?offset=0&limit=20`
+- Details endpoint: `https://pokeapi.co/api/v2/pokemon/{id}/`
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Technologies Used
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- React Native
+- Expo
+- TypeScript
+- React Navigation
+- PokeAPI
